@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 // import SButton from './button';
-import SButton from './SButton.vue';
+// import SButton from './SButton.vue';
+import JSXButton from './JSXButton';
 
-createApp(SButton).mount('#app');
+createApp(JSXButton).mount('#app');
