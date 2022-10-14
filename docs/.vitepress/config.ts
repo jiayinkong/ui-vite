@@ -1,4 +1,4 @@
-const siderbar = {
+const sidebar = {
     '/': [
         {
             text: '快速开始',
@@ -9,7 +9,7 @@ const siderbar = {
             children: [
                 {
                     text: 'Button按钮',
-                    link: '/component/button/'
+                    link: '/components/button/'
                 }
             ]
         },
@@ -32,8 +32,17 @@ const siderbar = {
 };
 
 const config = {
+    title: 'Ui-vite',
+    description: '组件库搭建',
     themeConfig: {
-        siderbar
+        sidebar
+    },
+    markdown: {
+        config: (md) => {
+            // 添加DemoBlock插槽
+            const { demoBlockPlugin } = require('vitepress-theme-demoblock');
+            md.use(demoBlockPlugin);
+        }
     }
 }
 

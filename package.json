@@ -15,11 +15,13 @@
   "license": "ISC",
   "devDependencies": {
     "@iconify-json/ic": "1.1.4",
+    "@types/node": "^18.8.5",
     "@vitejs/plugin-vue": "3.0.3",
     "@vitejs/plugin-vue-jsx": "^2.0.1",
+    "unocss": "^0.44.5",
     "vite": "3.0.7",
     "vitepress": "0.22.4",
-    "unocss": "^0.44.5"
+    "vitepress-theme-demoblock": "1.4.2"
   },
   "dependencies": {
     "vue": "3.2.37"
