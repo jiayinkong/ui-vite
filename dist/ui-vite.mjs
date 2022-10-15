@@ -1,17 +1,13 @@
 import { defineComponent, createVNode, openBlock, createElementBlock, createTextVNode } from "vue";
 const __uno = "";
 const props = {
-  color: {
-    type: String,
-    default: "blue"
-  },
   size: {
     type: String,
     default: "medium"
   },
-  icon: {
+  color: {
     type: String,
-    default: ""
+    default: "blue"
   },
   round: {
     type: Boolean,
@@ -20,14 +16,20 @@ const props = {
   plain: {
     type: Boolean,
     default: false
+  },
+  icon: {
+    type: String,
+    default: ""
   }
 };
-const HButton = defineComponent({
+const Button = defineComponent({
   name: "HButton",
   props,
   setup(props2, {
     slots
   }) {
+    var _a;
+    console.log(`html`, (_a = document.querySelector(`#app`)) == null ? void 0 : _a.innerHTML);
     const size = {
       small: {
         x: "2",
@@ -47,20 +49,20 @@ const HButton = defineComponent({
     };
     return () => createVNode("button", {
       "class": `
-        py-${size[props2.size].y}
-        px-${size[props2.size].x}
-        ${props2.round ? "rounded-full" : "rounded-lg"}
-        bg-${props2.color}-${props2.plain ? "100" : "500"}
-        hover:bg-${props2.color}-400
-        border-${props2.color}-${props2.plain ? "500" : "500"}
-        cursor-pointer
-        border-solid
-        text-${props2.plain ? props2.color + "-500" : "white"}
-        text-${size[props2.size].text}
-        hover:text-white
-        transition duration-300 ease-in-out transform hover:scale-105
-        mx-1
-        `
+          py-${size[props2.size].y}
+          px-${size[props2.size].x}
+          ${props2.round ? "rounded-full" : "rounded-lg"}
+          bg-${props2.color}-${props2.plain ? "100" : "500"}
+          hover:bg-${props2.color}-400
+          border-${props2.color}-${props2.plain ? "500" : "500"}
+          cursor-pointer
+          border-solid
+          text-${props2.plain ? props2.color + "-500" : "white"}
+          text-${size[props2.size].text}
+          hover:text-white
+          transition duration-300 ease-in-out transform hover:scale-105
+          mx-1
+          `
     }, [props2.icon !== "" ? createVNode("i", {
       "class": `i-ic-baseline-${props2.icon} p-3`
     }, null) : "", slots.default ? slots.default() : ""]);
@@ -88,14 +90,15 @@ const JButton = defineComponent({
 });
 const entry = {
   install(app) {
-    app.component(HButton.name, HButton);
+    app.component(Button.name, Button);
     app.component(TButton.name, TButton);
     app.component(JButton.name, JButton);
   }
 };
 export {
-  HButton,
+  Button as HButton,
   JButton,
   TButton,
   entry as default
 };
+//# sourceMappingURL=ui-vite.mjs.map
