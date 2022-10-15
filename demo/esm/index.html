@@ -8,6 +8,7 @@
 </head>
 <body>
   <div id="demo"></div>
+  <link rel="stylesheet" href="../../dist/assets/entry.f4e87f69.css">
   <script type="module">
     import { createApp } from 'vue/dist/vue.esm-bundler.js';
     // import UiVite from '../../dist/ui-vite.mjs';
@@ -25,7 +26,7 @@
     import { HButton } from '../../dist/ui-vite.mjs';
     createApp({
       template: `
-        <HButton/>
+      <HButton color="green" round plain>普通组件</Button>
       `,
     }).component(HButton.name, HButton)
       .mount('#demo');
