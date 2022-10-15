@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="demo"></div>
+  <script type="module">
+    import { createApp } from 'vue/dist/vue.esm-bundler.js';
+    // import UiVite from '../../dist/ui-vite.mjs';
+
+    // 全部组件加载
+    // createApp({
+    //   template: `
+    //     <HButton/>
+    //     <TButton/>
+    //     <JButton/>
+    //   `
+    // }).use(UiVite).mount('#demo');
+
+    // 单个加载
+    import { HButton } from '../../dist/ui-vite.mjs';
+    createApp({
+      template: `
+        <HButton/>
+      `,
+    }).component(HButton.name, HButton)
+      .mount('#demo');
+  </script>
+</body>
+</html>

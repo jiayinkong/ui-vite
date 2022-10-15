@@ -4,12 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vite": "3.0.7"
+    "@iconify-json/ic": "1.1.4",
+    "@types/node": "^18.8.5",
+    "@vitejs/plugin-vue": "3.0.3",
+    "@vitejs/plugin-vue-jsx": "^2.0.1",
+    "unocss": "^0.44.5",
+    "vite": "3.0.7",
+    "vitepress": "0.22.4",
+    "vitepress-theme-demoblock": "1.4.2"
+  },
+  "dependencies": {
+    "vue": "3.2.37"
   }
 }
