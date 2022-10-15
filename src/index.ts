@@ -4,7 +4,7 @@
 // import JSXButton from './JSXButton';
 
 import { createApp } from 'vue/dist/vue.esm-bundler.js';
-import HButton from './button/index';
+import HButton from './button';
 import UiVite from './entry';
 
 createApp({
